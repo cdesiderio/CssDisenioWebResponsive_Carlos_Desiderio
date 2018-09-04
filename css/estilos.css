@@ -1,0 +1,144 @@
+body
+{
+  /*CG: 1. Utiliza la tipografía Dancing Script.*/
+  font-family: 'Dancing Script', cursive;
+  /*CG: 2. Establece el color de fondo negro #02010a.*/
+  background-color: #02010a;
+}
+img
+{
+  /*CG: 3 .Cada imagen tiene un efecto de sombra de 2px con
+  color #02010a.*/
+  -webkit-box-shadow: 2px 2px 0 #02010a;
+}
+
+div
+{
+    /*border-style: dotted ;*/
+
+}
+
+.titulo
+{
+  text-align: left;
+  color: white;
+  text-shadow: 2px 2px #02010a;
+}
+
+.cabecera
+{
+  background-color: #5b7989;
+  border-radius: 10px;
+
+}
+nav {
+  height: 100%;
+}
+.Contenido .cabecera div nav
+{
+  display: block;
+  float: right;
+}
+
+.imagenCentral
+{
+  background-color: #82c3a6;
+
+}
+.imagenCentral img
+{
+  display: block;
+  margin: auto;
+}
+
+
+/*CG: 4 . Crea un div llamado contenido que este centrado y que
+ tenga máximo 900px de ancho para desktop y ocupará el 100%
+ para móviles.*/
+.Contenido
+{
+  align-self: center;
+  background-color: #82c3a6;
+  margin: 0;
+	padding: 0;
+	width: 100%;
+  /*??? 100% movil*/
+}
+
+.imagenesSecundarias
+{
+  display: flex;
+  flex-direction: row;
+  background-color:  #d5c75f ;
+  border: 1px;
+}
+
+.Pie
+{
+  display: flex;
+  flex-direction: row;
+  background-color:  #d5c75f ;
+  border: 1px;
+}
+
+
+figcaption
+{
+  text-align: center;
+}
+
+.imagenCentral
+{
+  width: 100%;
+}
+.imagenDerecha img:hover
+{
+  transform: translate(20px,-5px);
+  -webkit-box-shadow: 2px 2px 0 #82c3a6;
+}
+.imagenIzquierda img:hover
+{
+    transform: rotate(10deg);
+    -webkit-box-shadow: 2px 2px 0 #82c3a6;
+}
+.Pie
+{
+  border-radius: 10px;
+  background-color: #C6d5c5;
+}
+
+.redesSociales img
+{
+  -webkit-box-shadow: none;
+}
+.Pie .contacto p
+{
+  line-height: 0.5;
+}
+
+/*CG: 5. Utiliza media queries para manejar dos tamaños Desktop:
+ con ancho de 900px o más y móvil con menos de 900px.*/
+@media (min-width:900px)
+{
+  .imagenDerecha, .imagenIzquierda
+  {
+    width: 50%;
+  }
+.cabecera, .imagenCentral
+{
+    width: 100%;
+}
+.contacto, .termino, .redesSociales, .derechosAutor
+{
+  width: 25%;
+}
+  .Contenido {
+  min-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+}
+@media (max-width:899px)
+{
+
+}
