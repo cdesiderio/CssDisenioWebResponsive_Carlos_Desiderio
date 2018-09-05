@@ -5,11 +5,24 @@ body
   /*CG: 2. Establece el color de fondo negro #02010a.*/
   background-color: #02010a;
 }
+.C1, .C2 {
+width: 50%;
+}
+.C1{
+    text-align: left;
+  /*  border-style: dashed; */
+}
+.C2 {
+
+    text-align: right;
+  /*  border-style: dashed; */
+}
 img
 {
   /*CG: 3 .Cada imagen tiene un efecto de sombra de 2px con
   color #02010a.*/
   -webkit-box-shadow: 2px 2px 0 #02010a;
+  
 }
 
 div
@@ -20,25 +33,43 @@ div
 
 .titulo
 {
-  text-align: left;
+
   color: white;
   text-shadow: 2px 2px #02010a;
 }
 
+.PosicionCabecera
+{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+  /*  border-style: dashed; */
+
+}
 .cabecera
 {
   background-color: #5b7989;
   border-radius: 10px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 
 }
-nav {
-  height: 100%;
-}
+
+  /*nav {
+   height: 100%;
+   text-align: right;
+}*/
+/*
 .Contenido .cabecera div nav
 {
-  display: block;
-  float: right;
-}
+  display:inherit ;
+   float: right;
+}*/
 
 .imagenCentral
 {
@@ -81,7 +112,11 @@ nav {
   border: 1px;
 }
 
-
+ /*
+#ref1 #ref2 #ref3{
+  text-align:justify;
+}
+*/
 figcaption
 {
   text-align: center;
@@ -132,6 +167,7 @@ figcaption
 {
   width: 25%;
 }
+
   .Contenido {
   min-width: 900px;
   margin-left: auto;
@@ -141,4 +177,24 @@ figcaption
 @media (max-width:899px)
 {
 
+}
+
+
+
+
+
+
+
+
+.contenedorRetratos{
+    border-style: dashed;
+  	height: 100%;
+}
+
+.columna1Retrato, .columna2Retrato, .columna3Retrato{
+  /*	height: 100%; */
+    float:left;
+    width: 33.33%;
+      border: 1px;
+      border-style: dashed;
 }
