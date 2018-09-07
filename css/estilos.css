@@ -5,129 +5,99 @@ body
   /*CG: 2. Establece el color de fondo negro #02010a.*/
   background-color: #02010a;
 }
-.C1, .C2 {
-width: 50%;
-}
-.C1{
-    text-align: left;
-  /*  border-style: dashed; */
-}
-.C2 {
 
-    text-align: right;
-  /*  border-style: dashed; */
-}
-img
-{
-  /*CG: 3 .Cada imagen tiene un efecto de sombra de 2px con
-  color #02010a.*/
-  -webkit-box-shadow: 2px 2px 0 #02010a;
-  
-}
 
-div
-{
-    /*border-style: dotted ;*/
+.inicioSeccionCabecera{
+
+  width: 100%;
+   margin: 0;
+   padding: 50px;
+   border-radius: 10px 10px 0px 0px;
+   background-color: #5b7989;
+   display: flex;
+   flex-direction: row;
+
 
 }
 
-.titulo
-{
+img{
+    -webkit-box-shadow: 2px 2px 0 #02010a;
+}
 
+.titulo{
+  text-align: left;
+  margin: 10px;
+  padding: 0;
+  border: 0;
+  float: left;
+  width: 50%;
   color: white;
   text-shadow: 2px 2px #02010a;
+
 }
 
-.PosicionCabecera
-{
-  margin: 0;
+.links{
+  text-align: right;
+  margin: 10px;
   padding: 0;
-  width: 100%;
-  display: -webkit-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
-  /*  border-style: dashed; */
+  border: 0;
+  float: right;
+  width: 50%;
 
 }
-.cabecera
-{
-  background-color: #5b7989;
-  border-radius: 10px;
+
+
+.inicioImagenPrincipal{
+  width: 100%;
   margin: 0;
-  padding: 0;
-  width: 100%;
-
-}
-
-  /*nav {
-   height: 100%;
-   text-align: right;
-}*/
-/*
-.Contenido .cabecera div nav
-{
-  display:inherit ;
-   float: right;
-}*/
-
-.imagenCentral
-{
+  padding: 50px;
   background-color: #82c3a6;
 
 }
-.imagenCentral img
-{
+
+.inicioImagenPrincipal .imagenPrincipal{
+  width: 80%;
   display: block;
   margin: auto;
 }
 
+.inicioImagenesSecundarias{
 
-/*CG: 4 . Crea un div llamado contenido que este centrado y que
- tenga máximo 900px de ancho para desktop y ocupará el 100%
- para móviles.*/
-.Contenido
-{
-  align-self: center;
-  background-color: #82c3a6;
-  margin: 0;
-	padding: 0;
-	width: 100%;
-  /*??? 100% movil*/
-}
 
-.imagenesSecundarias
-{
   display: flex;
-  flex-direction: row;
-  background-color:  #d5c75f ;
-  border: 1px;
-}
-
-.Pie
-{
-  display: flex;
-  flex-direction: row;
-  background-color:  #d5c75f ;
-  border: 1px;
-}
-
- /*
-#ref1 #ref2 #ref3{
-  text-align:justify;
-}
-*/
-figcaption
-{
-  text-align: center;
-}
-
-.imagenCentral
-{
+  flex-direction:row;
   width: 100%;
+  margin: 0;
+  padding: 50px;
+  background-color:  #d5c75f;
+  border = 1px;
+}
+.imagenIzquierda{
+
+  flex-grow: 1;
+
+}
+.imagenIzquierda img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+.imagenDerecha{
+
+    flex-grow: 1;
+}
+.imagenDerecha img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
 }
 .imagenDerecha img:hover
 {
+
   transform: translate(20px,-5px);
   -webkit-box-shadow: 2px 2px 0 #82c3a6;
 }
@@ -136,65 +106,158 @@ figcaption
     transform: rotate(10deg);
     -webkit-box-shadow: 2px 2px 0 #82c3a6;
 }
+
+.figCaptionCSS{
+  text-align: center;
+
+}
+
 .Pie
 {
-  border-radius: 10px;
+   width: 100%;
+  border-radius: 0px 0px 10px 10px;
   background-color: #C6d5c5;
+ display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 50px;
 }
 
-.redesSociales img
-{
-  -webkit-box-shadow: none;
-}
-.Pie .contacto p
-{
-  line-height: 0.5;
+
+
+.galeria{
+
+
+  display: flex;
+  flex-direction:row;
+  width: 100%;
+  margin: 0;
+  padding: 50px;
+  background-color:  #d5c75f;
+  border = 1px;
 }
 
-/*CG: 5. Utiliza media queries para manejar dos tamaños Desktop:
- con ancho de 900px o más y móvil con menos de 900px.*/
+#gal1 figure img{
+  -webkit-filter:blur(10px);
+}
+#gal2 figure img{
+  -webkit-filter:grayscale(100%);
+}
+#gal3 figure img{
+  -webkit-filter:sepia(90%);
+}
+#gal4 figure img{
+  -webkit-filter:grayscale(100%);
+}
+#gal6 figure img{
+  -webkit-filter:grayscale(100%);
+}
+
+
+header{
+  animation: animacionCabecera 1s;
+}
+@-webkit-keyframes animacionCabecera
+{
+  0%{
+    margin-top:  150%;
+  }
+  60%{
+    margin-top:  -5%;
+  }
+  100%{
+    margin-top:  0%;
+  }
+}
+
+
+
 @media (min-width:900px)
 {
+  .inicioSeccionCabecera{
+
+     flex-direction: row;
+}
+
+
+  .inicioImagenesSecundarias{
+    flex-direction: row;
+  }
+
+  .Pie
+  {
+    flex-direction: row;
+
+  }
   .imagenDerecha, .imagenIzquierda
   {
     width: 50%;
   }
-.cabecera, .imagenCentral
+.inicioSeccionCabecera, .inicioImagenPrincipal
 {
     width: 100%;
 }
 .contacto, .termino, .redesSociales, .derechosAutor
 {
+  float: left;
   width: 25%;
 }
+.galeria
+{
+  flex-direction: row;
 
-  .Contenido {
-  min-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  }
+}
+.columna1, .columna2, .columna3
+{
+  float: left;
+  width: 33%;
+}
+
+    .Contenido {
+    min-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    }
 }
 @media (max-width:899px)
 {
+  .Contenido {
+width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  }
 
+
+  .inicioSeccionCabecera{
+
+     flex-direction: column;
+}
+.titulo, .links{
+  text-align: center;
 }
 
+  .inicioImagenesSecundarias{
+    flex-direction: column;
+  }
 
+  .Pie
+  {
+    flex-direction: column;
 
+  }
+  .contacto, .termino, .redesSociales, .derechosAutor
+  {
 
+    width: 100%;
+  }
+  .galeria
+  {
+    flex-direction: column;
 
+  }
+  .columna1, .columna2, .columna3
+  {
+      width: 100%;
+  }
 
-
-
-.contenedorRetratos{
-    border-style: dashed;
-  	height: 100%;
-}
-
-.columna1Retrato, .columna2Retrato, .columna3Retrato{
-  /*	height: 100%; */
-    float:left;
-    width: 33.33%;
-      border: 1px;
-      border-style: dashed;
 }
